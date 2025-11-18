@@ -1,10 +1,15 @@
 com/xpn/webservice/model/entitites/Clientes$TipoCliente.class
+com/xpn/webservice/model/entitites/ClientesDao.class
+com/xpn/webservice/model/exceptions/InstanceNotFoundException.class
 com/xpn/webservice/model/entitites/Productos.class
+com/xpn/webservice/rest/RegistrarPedidoParamsDto.class
 com/xpn/webservice/Application.class
 com/xpn/webservice/model/services/LogisticaServiceImpl.class
+com/xpn/webservice/rest/PedidoDto.class
 com/xpn/webservice/rest/LogisticsController.class
 com/xpn/webservice/model/entitites/Pedidos.class
 com/xpn/webservice/rest/DetallePedidoDto.class
+com/xpn/webservice/model/exceptions/InstanceException.class
 com/xpn/webservice/model/entitites/ProductosDao.class
 com/xpn/webservice/model/services/LogisticaService.class
 com/xpn/webservice/model/entitites/Clientes.class

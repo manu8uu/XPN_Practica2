@@ -26,10 +26,11 @@ CREATE TABLE productos (
 CREATE TABLE pedidos (
     id BIGINT NOT NULL AUTO_INCREMENT,
     cliente_id BIGINT NOT NULL,
-    fecha DATE NOT NULL,
+    fecha DATETIME NOT NULL,
     producto_id BIGINT NOT NULL,
     cantidad INT NOT NULL,
     observaciones VARCHAR(255),
+    estado VARCHAR(20) NOT NULL,
     CONSTRAINT pedidos_pk PRIMARY KEY (id),
     CONSTRAINT pedidos_cliente_fk FOREIGN KEY (cliente_id) REFERENCES clientes (id),
     CONSTRAINT pedidos_producto_fk FOREIGN KEY (producto_id) REFERENCES productos (id)
@@ -60,7 +61,7 @@ CREATE TABLE ordenes_reabastecimiento (
     id BIGINT NOT NULL AUTO_INCREMENT,
     producto_id BIGINT NOT NULL,
     cantidad INT NOT NULL,
-    fecha DATE NOT NULL,
+    fecha DATETIME NOT NULL,
     almacen_destino_id BIGINT NOT NULL,
     CONSTRAINT ordenes_reabastecimiento_pk PRIMARY KEY (id),
     CONSTRAINT ordenes_reabastecimiento_producto_fk FOREIGN KEY (producto_id) REFERENCES productos (id),

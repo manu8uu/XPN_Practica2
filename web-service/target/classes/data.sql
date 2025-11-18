@@ -30,9 +30,9 @@ INSERT INTO stock_almacen (producto_id, almacen_id, cantidad) VALUES
 (5, 2, 1500);
 
 -- Datos iniciales: pedidos
-INSERT INTO pedidos (cliente_id, fecha, producto_id, cantidad, observaciones) VALUES
-(1, '2025-11-15', 1, 50, 'Urgente'),
-(2, '2025-11-16', 2, 30, 'Entrega estándar');
+INSERT INTO pedidos (cliente_id, fecha, producto_id, cantidad, observaciones, estado) VALUES
+(1, '2025-11-15', 1, 50, 'Urgente', 'CREADO'),
+(2, '2025-11-16', 2, 30, 'Entrega estándar', 'CREADO');
 
 -- Datos iniciales: ordenes_reabastecimiento
 INSERT INTO ordenes_reabastecimiento (producto_id, cantidad, fecha, almacen_destino_id) VALUES

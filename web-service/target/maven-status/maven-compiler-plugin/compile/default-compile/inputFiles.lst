@@ -1,11 +1,16 @@
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/Application.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/Clientes.java
+/home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/ClientesDao.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/Pedidos.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/PedidosDao.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/Productos.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/entitites/ProductosDao.java
+/home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/exceptions/InstanceException.java
+/home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/exceptions/InstanceNotFoundException.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/services/LogisticaService.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/model/services/LogisticaServiceImpl.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/rest/DetallePedidoDto.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/rest/LogisticsController.java
 /home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/rest/PedidoConversor.java
+/home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/rest/PedidoDto.java
+/home/pablo/software/XPN_Practica2/web-service/src/main/java/com/xpn/webservice/rest/RegistrarPedidoParamsDto.java

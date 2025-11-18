@@ -1,12 +1,8 @@
-package com.xpn.webservice.model.entitites;
+package com.xpn.webservice.rest;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "pedidos")
-public class Pedidos {
+public class PedidoDto {
 
     public enum EstadoPedido {
         CREADO,
@@ -16,27 +12,25 @@ public class Pedidos {
     }
 
     private Long id;
-    private Clientes cliente;
+    private Long clienteId;
     private LocalDateTime fecha;
-    private Productos producto;
+    private Long productoId;
     private int cantidad;
     private String observaciones;
     private EstadoPedido estado;
 
-    public Pedidos() {}
+    public PedidoDto() {}
 
-
-    public Pedidos(Clientes cliente, LocalDateTime fecha, Productos producto, int cantidad, String observaciones, EstadoPedido estado) {
-        this.cliente = cliente;
+    public PedidoDto(Long id, Long clienteId, LocalDateTime fecha, Long productoId, int cantidad, String observaciones, EstadoPedido estado) {
+        this.id = id;
+        this.clienteId = clienteId;
         this.fecha = fecha;
-        this.producto = producto;
+        this.productoId = productoId;
         this.cantidad = cantidad;
         this.observaciones = observaciones;
         this.estado = estado;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
@@ -45,17 +39,14 @@ public class Pedidos {
         this.id = id;
     }
 
-    @ManyToOne(optional=false, fetch= FetchType.LAZY)
-    @JoinColumn(name = "cliente_id")
-    public Clientes getCliente() {
-        return cliente;
+    public Long getClienteId() {
+        return clienteId;
     }
 
-    public void setCliente(Clientes cliente) {
-        this.cliente = cliente;
+    public void setClienteId(Long clienteId) {
+        this.clienteId = clienteId;
     }
 
-    @Column(name = "fecha", nullable = false)
     public LocalDateTime getFecha() {
         return fecha;
     }
@@ -64,14 +55,12 @@ public class Pedidos {
         this.fecha = fecha;
     }
 
-    @ManyToOne(optional=false, fetch= FetchType.LAZY)
-    @JoinColumn(name = "producto_id")
-    public Productos getProducto() {
-        return producto;
+    public Long getProductoId() {
+        return productoId;
     }
 
-    public void setProducto(Productos producto) {
-        this.producto = producto;
+    public void setProductoId(Long productoId) {
+        this.productoId = productoId;
     }
 
     public int getCantidad() {
@@ -89,9 +78,7 @@ public class Pedidos {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
+    
     public EstadoPedido getEstado() {
         return estado;
     }
